@@ -10,8 +10,8 @@ export default function HeroSection() {
         <div className='mask p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-white'>
-              <h1 className='mb-3'>Comienza tu experiencia en Canadá</h1>
-              <h5 className='mb-3'>Te apoyamos con procesos, documentación e información para tu nueva vida</h5>
+              <h1 className='mb-3'>Estudia y trabaja en el extranjero</h1>
+              <h5 className='mb-3'>Te apoyamos con el proceso para comenzar tu nueva vida</h5>
               <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
                 Agenda una reunión
               </a>

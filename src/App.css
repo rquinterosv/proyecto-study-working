@@ -2,3 +2,56 @@
   margin: 0;
   padding: 0;
 }
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; 
+}
+
+.card-container {
+  display: flex;
+  gap: 10px; /* Espacio entre las tarjetas */
+}
+
+
+.card {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  width: 100%;
+  height: auto;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+.country-name {
+  margin-top: 15px;
+  font-size: 20px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.card.enlarged {
+  transform: scale(1.1);
+}
+
+.card.enlarged .flag {
+  transform: scale(1.2);
+}
+
+.card.enlarged .country-name {
+  font-size: 24px;
+}
