@@ -11,7 +11,7 @@ function Service2() {
           <Card className="w-100">
             <Card.Body className="d-flex">
               <div>
-                <Card.Title>Special title treatment</Card.Title>
+                <Card.Title>Estudia algo específico</Card.Title>
                 <Card.Text>
                   With supporting text below as a natural lead-in to additional content.
                 </Card.Text>

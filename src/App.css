@@ -13,7 +13,7 @@
 
 .card-container {
   display: flex;
-  gap: 5px; /* Espacio entre las tarjetas */
+  gap: 5px; 
 }
 
 .card {
