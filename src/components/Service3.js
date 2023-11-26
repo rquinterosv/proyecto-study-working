@@ -15,7 +15,7 @@ function Service1() {
                 <Image src={img1} alt="Image" thumbnail />
               </div>
               <div>
-                <Card.Title>Estudia Ingles</Card.Title>
+                <Card.Title>Planifica tus vacaciones</Card.Title>
                 <Card.Text>
                   With supporting text below as a natural lead-in to additional content.
                 </Card.Text>
