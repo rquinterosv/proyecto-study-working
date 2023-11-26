@@ -1,43 +1,27 @@
-import './App.css';
 
-// Components
-import Menu from './components/Menu';
-import HeroSection from './components/HeroSection';
-import CardFlag from './components/CardFlag';
-import Service1 from './components/Service1';
-import Service2 from './components/Service2';
-import Footer from './components/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from '../src/pages/Home';
+import About from '../src/pages/About';
+import Contact from '../src/pages/Contact';
 
-// Bootstrap
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Menu from './components/Menu'; // Import your Menu component
 
-function App() {
+
+const App = () => {
   return (
-    <>
-      <Menu />
-      <HeroSection />
-      <div className="app-container">
-        <div className="card-container d-flex justify-content-center">
-          <div className="col-lg-6">
-            <CardFlag />
-          </div>
-          <div className="col-lg-6">
-            <CardFlag />
-          </div>
-        </div>
+    <Router>
+      <div>
+        <Menu /> {/* Render the Menu component */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-
-      <Container fluid="md">
-      <Row>
-        <Col><Service1 /></Col>
-        <Col className='mt-2 mb-2'><Service2 /></Col>
-      </Row>
-    </Container>
-      <Footer />
-    </>
+    </Router>
   );
-}
+};
+
 
 export default App;
