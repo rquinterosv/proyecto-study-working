@@ -3,6 +3,7 @@ import Menu from './components/Menu';
 import HeroSection from './components/HeroSection';
 import CardFlag from './components/CardFlag';
 import Service1 from './components/Service1';
+import Service2 from './components/Service2';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           </div>
         </div>
       </div>
-      <Service1 /> {/* Render Service1 component here */}
+      <Service1 />
+      <Service2 />
     </>
   );
 }

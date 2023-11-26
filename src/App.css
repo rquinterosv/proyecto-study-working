@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/* CardFlag */
 .app-container {
   display: flex;
   justify-content: center;
@@ -12,12 +13,11 @@
 
 .card-container {
   display: flex;
-  gap: 10px; /* Espacio entre las tarjetas */
+  gap: 5px; /* Espacio entre las tarjetas */
 }
 
-
 .card {
-  width: 200px;
+  width: 160px;
   height: 250px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -45,13 +45,19 @@
 }
 
 .card.enlarged {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card.enlarged .flag {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .card.enlarged .country-name {
   font-size: 24px;
+}
+
+/* Service */
+
+.image-service {
+  width: 200px;
 }
