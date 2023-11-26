@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import '../App.css'
+import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
+import '../App.css';
 
 const CardFlag = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,18 +11,27 @@ const CardFlag = () => {
   };
 
   return (
-    <div
+    <Card
       className={`card ${isHovered ? 'enlarged' : ''}`}
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
-      <img
-        src="https://flagcdn.com/w320/ca.png" // URL de la bandera de Canadá
-        alt="Canadian Flag"
-        className="flag"
-      />
-      <h2 className="country-name">Canada</h2>
-    </div>
+      <Card.Body>
+        <div className="d-flex">
+          <div className="mr-3">
+            <Image
+              src="https://flagcdn.com/w320/ca.png" // URL de la bandera de Canadá
+              alt="Canadian Flag"
+              className="flag"
+              thumbnail
+            />
+          </div>
+          <div>
+            <Card.Title>Canada</Card.Title>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
   );
 };
 
