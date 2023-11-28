@@ -2,6 +2,7 @@ import '../App.css';
 
 // Components
 import HeroSection from '../components/HeroSection';
+import GeneralService from '../components/GeneralService';
 import CardFlag from '../components/CardFlag';
 import Service1 from '../components/Service1';
 import Service2 from '../components/Service2';
@@ -17,24 +18,34 @@ function Home() {
   return (
     <>
       <HeroSection />
-      <div className="app-container">
-        <div className="card-container d-flex justify-content-center">
-          <div className="col-lg-6">
-            <CardFlag />
-          </div>
-          <div className="col-lg-6">
-            <CardFlag />
-          </div>
-        </div>
-      </div>
+      <Container>
+        <GeneralService />
+      </Container>
+
+      <Container>
+        <Row className="card-flag-container">
+          <Col><CardFlag /></Col>
+          <Col><CardFlag /></Col>
+        </Row>
+      </Container>
 
       <Container fluid="md">
-      <Row>
-        <Col className='col-lg-12'><Service1 /></Col>
-        <Col className='col-lg-12 mt-2'><Service2 /></Col>
-        <Col className='col-lg-12 mt-2 mb-2'><Service3 /></Col>
-      </Row>
-    </Container>
+        <Row>
+          <Col>
+            <Service1 />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Service2 />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Service3 />
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </>
   );

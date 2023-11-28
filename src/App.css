@@ -3,7 +3,27 @@
   padding: 0;
 }
 
+/* General Service */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service-item {
+  text-align: center;
+  margin: 20px;
+  flex: 1 0 200px; /* Ajusta el ancho máximo deseado para cada elemento */
+}
+
 /* CardFlag */
+
+.card-flag-container {
+  display: flex;
+  justify-content: space-evenly;
+  /* Otros estilos si los necesitas */
+}
 .app-container {
   display: flex;
   justify-content: center;
@@ -56,8 +76,17 @@
   font-size: 24px;
 }
 
+
 /* Service */
 
-.image-service {
-  width: 200px;
+.custom-container-service {
+  margin: 5px;
+  border: 1px solid #ccc; /* Puedes ajustar el grosor y color del borde */
+  border-radius: 20px;
+  padding: 20px; /* Opcional: Añade espaciado interno al contenedor */
+}
+
+.custom-container-service .custom-image {
+  border: 2px solid black; /* Borde negro de 2px */
+  border-radius: 10px; /* Radio de borde de 10px */
 }
