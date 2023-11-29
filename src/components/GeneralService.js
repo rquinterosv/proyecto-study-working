@@ -1,20 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDesktop, faCode, faCog, faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { faEarthAmericas, faGraduationCap, faPlane, faHandshake } from '@fortawesome/free-solid-svg-icons';
 
 const GeneralService = () => {
   const services = [
-    { icon: faDesktop, title: 'Diseño web' },
-    { icon: faCode, title: 'Desarrollo web' },
-    { icon: faCog, title: 'Configuración' },
-    { icon: faChartBar, title: 'Analítica' },
+    { icon: faEarthAmericas, title: 'Cursos de inglés'},
+    { icon: faGraduationCap, title: 'Visas de Estudio' },
+    { icon: faPlane, title: 'Plan de Vacaciones' },
+    { icon: faHandshake, title: 'Asesoría Migratoria' },
   ];
 
   return (
     <div className="text-center p-4"> {/* Clase Bootstrap para centrar */}
       <div className="general-service">
-        <h2>Our Services</h2>
-        <p>Explore the various services we offer</p>
-
+        <p>Te apoyamos con el primer paso</p>
+        <h2>Nuestros servicios</h2>
         <div className="service-list">
           {services.map((service, index) => (
             <div key={index} className="service-item">

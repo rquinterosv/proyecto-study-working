@@ -1,8 +1,26 @@
-/* CSS files */
-@import url('../src/css/fonts.css');
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
+}
+
+/* Fonts */
+
+h1 {
+  font-family: 'Tenor Sans', sans-serif;   
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+}
+
+h5 {
+  font-weight: 400;
+  color: white;
+  font-style: italic;
 }
 
 /* Menu */
@@ -27,13 +45,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
 }
 
 .service-item {
   text-align: center;
   margin: 20px;
-  flex: 1 0 200px; /* Ajusta el ancho máximo deseado para cada elemento */
+  flex: 1 0 calc(25% - 40px); /* Ajusta el ancho para que haya cuatro elementos por fila */
+  max-width: calc(25% - 40px); /* Ancho máximo para asegurar cuatro elementos por fila */
+}
+
+@media screen and (max-width: 768px) {
+  .service-item {
+    flex: 1 0 calc(50% - 40px); /* En dispositivos pequeños, dos elementos por fila */
+    max-width: calc(50% - 40px); /* Ancho máximo para dos elementos por fila */
+  }
 }
 
 /* CardFlag */
