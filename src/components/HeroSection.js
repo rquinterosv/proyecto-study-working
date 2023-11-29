@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 import heroimg from '../img/Hero.png';
 
 export default function HeroSection() {
@@ -16,10 +17,13 @@ export default function HeroSection() {
       }}
     >
       <div className='p-5 text-center'>
-        <div className='mask p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        <div className='mask p-3' style={{ 
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            borderRadius: '15px',   
+            }}>
           <div className='d-flex justify-content-center align-items-center h-100'>
-            <div className='text-white'>
-              <h1 className='mb-3'>Estudia y trabaja en el extranjero</h1>
+            <div>
+              <h1 className='mb-3'>Migra al extranjero</h1>
               <h5 className='mb-3'>Te apoyamos con el proceso para comenzar tu nueva vida</h5>
               <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
                 Agenda una reunión
