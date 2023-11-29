@@ -1,5 +1,5 @@
-import React from 'react';
 import '../App.css';
+import React from 'react';
 import heroimg from '../img/Hero.png';
 
 export default function HeroSection() {
