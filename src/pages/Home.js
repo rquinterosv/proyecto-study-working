@@ -23,10 +23,21 @@ function Home() {
         <GeneralService />
       </Container>
 
-      <Container>
-        <Row className="card-flag-container">
-          <Col><CardFlag /></Col>
-          <Col><CardFlag /></Col>
+      <Container fluid>
+        <Row className="card-flag-container justify-content-center text-center">
+          <Col xs={12} md={6} lg={3}>
+            <CardFlag
+              flagSrc="https://flagcdn.com/w320/ca.png"
+              countryName="Canadá"
+            />
+          </Col>
+          <Col xs={12} md={6} lg={3}>
+            <CardFlag
+              flagSrc="https://flagcdn.com/w320/eu.png"
+              countryName="Europa"
+            />
+          </Col>
+          {/* Agrega más tarjetas según sea necesario */}
         </Row>
       </Container>
 

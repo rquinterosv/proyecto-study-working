@@ -65,61 +65,36 @@ h5 {
 
 .card-flag-container {
   display: flex;
-  justify-content: space-evenly;
-  /* Otros estilos si los necesitas */
-}
-.app-container {
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 12vh; 
 }
 
-.card-container {
+.card-flag-container .card-flag {
+  border: 2px solid #ccc; /* Borde sólido de 2px con color gris */
+  border-radius: 10px; /* Radio de borde de 10px para esquinas redondeadas */
+  padding: 10px;
   display: flex;
-  gap: 5px; 
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.card {
-  width: 160px;
-  height: 250px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card-flag-container .card-flag:hover {
+  border-color: #333; /* Cambio de color al pasar el mouse */
+}
+
+.image-container {
+  width: 100px; /* Ancho fijo para las imágenes */
+  height: 100%; /* Alto fijo para las imágenes */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
 .flag {
   width: 100%;
-  height: auto;
-  max-height: 80%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen manteniendo la relación de aspecto */
 }
-
-.country-name {
-  margin-top: 15px;
-  font-size: 20px;
-  transition: font-size 0.3s ease-in-out;
-}
-
-.card.enlarged {
-  transform: scale(1.05);
-}
-
-.card.enlarged .flag {
-  transform: scale(1.05);
-}
-
-.card.enlarged .country-name {
-  font-size: 24px;
-}
-
 
 /* Service */
 

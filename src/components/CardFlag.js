@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import '../App.css';
 
-const CardFlag = () => {
+const CardFlag = ({ flagSrc, countryName }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const toggleHover = () => {
@@ -11,27 +11,22 @@ const CardFlag = () => {
   };
 
   return (
-    <Card
-      className={`card ${isHovered ? 'enlarged' : ''}`}
+    <Container
+      fluid
+      className={`card-flag ${isHovered ? 'enlarged' : ''}`}
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
-      <Card.Body>
-        <div className="d-flex">
-          <div className="mr-3">
-            <Image
-              src="https://flagcdn.com/w320/ca.png" // URL de la bandera de Canadá
-              alt="Canadian Flag"
-              className="flag"
-              thumbnail
-            />
-          </div>
-          <div>
-            <Card.Title>Canada</Card.Title>
-          </div>
-        </div>
-      </Card.Body>
-    </Card>
+      <div className="image-container">
+        <Image
+          src={flagSrc}
+          alt={`${countryName} Flag`}
+          className="flag"
+          thumbnail
+        />
+      </div>
+      <h4>{countryName}</h4>
+    </Container>
   );
 };
 
