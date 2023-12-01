@@ -9,6 +9,10 @@ const GeneralService = () => {
     { icon: faHandshake, title: 'Asesoría Migratoria' },
   ];
 
+  const titleStyle = {
+    color: '#00CED1', // Color turquesa
+  };
+
   return (
     <div className="text-center p-4"> {/* Clase Bootstrap para centrar */}
       <div className="general-service">
@@ -18,7 +22,7 @@ const GeneralService = () => {
           {services.map((service, index) => (
             <div key={index} className="service-item">
               <FontAwesomeIcon icon={service.icon} size="3x" />
-              <h3>{service.title}</h3>
+              <h4 style={titleStyle}>{service.title}</h4>
             </div>
           ))}
         </div>

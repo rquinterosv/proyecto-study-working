@@ -28,14 +28,11 @@ const Service1 = ({ selectedCountry }) => {
         {/* Contenido en la derecha */}
         <Col lg={6} className="order-lg-2">
           <div>
-            {selectedCountry === 'canada' ? (
+            {selectedCountry === 'Canada' && (
               <>
                 <h2>Información para Canadá</h2>
                 <p>Información específica para Canadá</p>
                 {/* Agrega aquí el contenido específico para Canadá */}
-              </>
-            ) : (
-              <>
                 <h2>Cursos de Inglés Intensivos</h2>
                 <p>Subtítulo</p>
                 <ul>

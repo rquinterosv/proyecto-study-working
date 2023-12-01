@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 
 // Components
@@ -11,12 +11,15 @@ import Service3 from '../components/Service3';
 import Footer from '../components/Footer';
 
 // Bootstrap
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col} from 'react-bootstrap';
+
 
 function Home() {
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState('Canada');
+
+  useEffect(() => {
+    setSelectedCountry('Canada');
+  }, []);
 
   const handleCardClick = (countryName) => {
     console.log('Clicked Country:', countryName); // Verificar si se hace clic en la tarjeta
@@ -39,19 +42,22 @@ function Home() {
       </Container>
 
       <Container fluid>
+        <h3 className='text-center p-2'>¿Donde quieres viajar?</h3>
         <Row className="card-flag-container justify-content-center text-center">
           <Col xs={12} md={6} lg={3}>
-          <CardFlag
-            flagSrc="https://flagcdn.com/w320/ca.png"
-            countryName="Canada"
-            onClick={handleCardClick} // Pasar la función handleCardClick
-          />
+            <CardFlag
+              flagSrc="https://flagcdn.com/w320/ca.png"
+              countryName="Canada"
+              isSelected={selectedCountry === 'Canada'} // Añade isSelected
+              onClick={handleCardClick}
+            />
           </Col>
           <Col xs={12} md={6} lg={3}>
             <CardFlag
               flagSrc="https://flagcdn.com/w320/eu.png"
               countryName="Europa"
-              onClick={() => handleCardClick('Europa')} // Manejar clic en la tarjeta de Europa
+              isSelected={selectedCountry === 'Europe'} // Añade isSelected
+              onClick={() => handleCardClick('Europa')}
             />
           </Col>
           {/* Agrega más tarjetas según sea necesario */}
@@ -59,7 +65,7 @@ function Home() {
       </Container>
 
       {/* Mostrar contenido específico según la tarjeta seleccionada */}
-      {selectedCountry === 'Canada' && <Service2 selectedCountry={selectedCountry} />}
+      {selectedCountry === 'Canada' && <Service1 selectedCountry={selectedCountry} />}
       {selectedCountry === 'Europe' && <div>Contenido específico para Europa</div>}
       {/* Agrega más condiciones para otros países si es necesario */}
       <Footer />

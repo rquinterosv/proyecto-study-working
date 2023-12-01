@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
+import { Container, Image } from 'react-bootstrap';
 import '../App.css';
 
 const CardFlag = ({ flagSrc, countryName, onClick }) => {
