@@ -1,0 +1,34 @@
+/* contact.css */
+
+/* Colores */
+:root {
+  --turquesa: #00CED1;
+  --azul-marino: #001F3F;
+  --verde-oliva: #808000;
+  --azul-profundo: #00008B;
+}
+
+/* Estilos para el cuadro de contacto */
+.container {
+  background-color: var(--azul-marino);
+  padding: 30px;
+  border: 5px solid var(--turquesa);
+  border-radius: 10px;
+}
+
+.professional-profile img {
+  width: 150px;
+  height: 150px;
+}
+
+.professional-profile h3,
+.professional-profile p {
+  color: var(--verde-oliva);
+}
+
+.contact-info,
+.contact-form {
+  color: var(--turquesa);
+}
+
+/* Agrega estilos adicionales si los necesitas */
