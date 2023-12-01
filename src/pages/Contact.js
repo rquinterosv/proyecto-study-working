@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/contact.css'; // Si necesitas estilos adicionales
+import styles from '../css/contact.module.css'; // Importar los estilos como una variable 'styles'
 
 const Contact = () => {
 
@@ -33,11 +33,11 @@ const Contact = () => {
 
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div className="row">
       <div className="col-md-6 p-4">
           {/* Información de contacto y formulario */}
-          <div className="contact-form">
+          <div className={styles['contact-form']}>
             <h2>Formulario de Contacto</h2>
             <form>
               <div className="form-group">
@@ -87,14 +87,14 @@ const Contact = () => {
         </div>
         <div className="col-md-6 p-4">
           {/* Información del profesional */}
-          <div className="contact-info">
+          <div className={styles['contact-info']}>
             <h2>Información de Contacto</h2>
             <p>Dirección: [Dirección]</p>
             <p>Teléfono: [Teléfono]</p>
             <p>Email: [Email]</p>
             {/* Puedes agregar más información de contacto según sea necesario */}
           </div>
-          <div className="professional-profile text-center">
+          <div className={`${styles['professional-profile']} text-center`}>
             <img
               src="URL_DE_LA_IMAGEN"
               alt="Foto del profesional"
