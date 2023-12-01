@@ -1,50 +1,63 @@
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
-import img1 from '../img/img.jpg';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import img1 from '../img/Hero.png'; // Cambia estas URLs por las imágenes correspondientes
 
 const Service1 = ({ selectedCountry }) => {
-  const servicios = [
-    'Servicio 1',
-    'Servicio 2',
-    'Servicio 3',
-    'Servicio 4',
-    // Agrega más servicios si es necesario
+  const services = [
+    {
+      title: 'Card Title 1',
+      subTitle: 'Subtitle 1',
+      points: ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
+      image: img1, // Cambia la URL de la imagen para cada tarjeta
+    },
+    {
+      title: 'Card Title 2',
+      subTitle: 'Subtitle 2',
+      points: ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
+      image: img1, // Cambia la URL de la imagen para cada tarjeta
+    },
+    {
+      title: 'Card Title 3',
+      subTitle: 'Subtitle 3',
+      points: ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
+      image: img1, // Cambia la URL de la imagen para cada tarjeta
+    },
+    {
+      title: 'Card Title 4',
+      subTitle: 'Subtitle 4',
+      points: ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
+      image: img1, // Cambia la URL de la imagen para cada tarjeta
+    },
   ];
 
   return (
     <Container fluid className="custom-container-service">
       <Row className="align-items-center">
-        <Col lg={6} className="order-lg-1">
-          {/* Imagen en la izquierda para desktop */}
-          <div className="d-none d-lg-block">
-            <Image src={img1} fluid className="custom-image" />
-          </div>
-
-          {/* Imagen arriba para mobile */}
-          <div className="d-block d-lg-none mb-3">
-            <Image src={img1} fluid className="custom-image" />
-          </div>
-        </Col>
-
         {/* Contenido en la derecha */}
-        <Col lg={6} className="order-lg-2">
-          <div>
-            {selectedCountry === 'Canada' && (
-              <>
-                <h2>Información para Canadá</h2>
-                <p>Información específica para Canadá</p>
-                {/* Agrega aquí el contenido específico para Canadá */}
-                <h2>Cursos de Inglés Intensivos</h2>
-                <p>Subtítulo</p>
-                <ul>
-                  {servicios.map((servicio, index) => (
-                    <li key={index}>{servicio}</li>
-                  ))}
-                </ul>
-                <div className="d-flex justify-content-end">
-                  <Button variant="primary">Botón</Button>
-                </div>
-              </>
-            )}
+        <Col lg={12} className="order-lg-2">
+          <div className="container">
+            <Row className="justify-content-center">
+              {selectedCountry === 'Canada' &&
+                services.map((service, index) => (
+                  <Col key={index} lg={3} md={12} className="mb-3">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={service.image} /> {/* Utiliza la imagen correspondiente */}
+                      <Card.Body>
+                        <Card.Title>{service.title}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{service.subTitle}</Card.Subtitle>
+                        <Card.Text>
+                          <ul>
+                            {service.points.map((point, idx) => (
+                              <li key={idx}>{point}</li>
+                            ))}
+                          </ul>
+                        </Card.Text>
+                        <Button variant="primary">Go somewhere</Button>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))
+              }
+            </Row>
           </div>
         </Col>
       </Row>
@@ -53,3 +66,5 @@ const Service1 = ({ selectedCountry }) => {
 };
 
 export default Service1;
+
+

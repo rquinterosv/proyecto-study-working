@@ -114,8 +114,6 @@ h5 {
 
 .custom-container-service {
   margin: 5px;
-  border: 1px solid #ccc; /* Puedes ajustar el grosor y color del borde */
-  border-radius: 20px;
   padding: 20px; /* Opcional: Añade espaciado interno al contenedor */
 }
 
