@@ -1,18 +1,16 @@
-/* contact.module.css */
-
 /* Colores */
 :root {
-  --turquesa: #00CED1;
-  --azul-marino: #001F3F;
-  --verde-oliva: #808000;
-  --azul-profundo: #00008B;
+  --azul: #393459; /* Azul */
+  --celeste: #94E1F2; /* Celeste */
+  --verde: #81A649; /* Verde */
+  --cafe: #F2E2CE; /* Café */
 }
 
 /* Estilos para el cuadro de contacto */
 .container {
   background-color: white;
   padding: 30px;
-  border: 5px solid var(--azul-profundo);
+  border: 5px solid var(--celeste); /* Cambio de color a Celeste */
   border-radius: 10px;
   margin: 20px;
 }
@@ -24,13 +22,13 @@
 
 .professional-profile h3,
 .professional-profile p {
-  color: var(--verde-oliva);
+  color: var(--verde); /* Cambio de color a Verde */
   font-weight: 600;
 }
 
 .contact-info,
 .contact-form {
-  color: var(--turquesa);
+  color: var(--verde); /* Cambio de color a Azul */
   font-weight: 600;
   font-style: italic;
 }

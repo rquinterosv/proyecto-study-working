@@ -3,21 +3,21 @@ import { faEarthAmericas, faGraduationCap, faPlane, faHandshake } from '@fortawe
 
 const GeneralService = () => {
   const services = [
-    { icon: faEarthAmericas, title: 'Cursos de inglés'},
+    { icon: faEarthAmericas, title: 'Cursos de inglés' },
     { icon: faGraduationCap, title: 'Visas de Estudio' },
     { icon: faPlane, title: 'Plan de Vacaciones' },
     { icon: faHandshake, title: 'Asesoría Migratoria' },
   ];
 
   const titleStyle = {
-    color: '#00CED1', // Color turquesa
+    color: '#393459', // Nuevo color de texto
   };
 
   return (
-    <div className="text-center p-4"> {/* Clase Bootstrap para centrar */}
+    <div className="text-center p-4">
       <div className="general-service">
         <p>Te apoyamos con el primer paso</p>
-        <h2>Nuestros servicios</h2>
+        <h2 style={{ backgroundColor: '#94E1F2', borderRadius: '10px', padding: '5px', color: 'white' }}>Nuestros servicios</h2>
         <div className="service-list">
           {services.map((service, index) => (
             <div key={index} className="service-item">

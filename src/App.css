@@ -12,15 +12,15 @@
 /* Fonts */
 
 h1 {
-  font-family: 'Tenor Sans', sans-serif;   
+  font-family: 'Tenor Sans', sans-serif;
   font-weight: 700;
   font-size: 50px;
-  color: white;
+  color: #393459; /* Color de letras */
 }
 
 h2 {
   font-style: italic;
-  background-color:  #808000;
+  background-color: #94E1F2; /* Nuevo color de fondo */
   border-radius: 10px;
   padding: 5px;
   color: white;
@@ -38,6 +38,7 @@ h5 {
 }
 
 /* Menu */
+
 /* Estilos para desktop */
 @media (min-width: 768px) {
   .navbar-brand img {

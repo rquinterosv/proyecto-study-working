@@ -5,6 +5,22 @@ const Contact = () => {
 
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    if (isChecked) {
+      // Ejemplo: enviar el formulario
+      console.log('Formulario enviado correctamente.');
+    } else {
+      console.log('Debe aceptar los términos y condiciones para enviar el formulario.');
+    }
+  };
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -31,11 +47,15 @@ const Contact = () => {
     </option>
   ));
 
+  useEffect(() => {
+    setIsFormValid(isChecked);
+  }, [isChecked]);
+
 
   return (
     <div className={styles.container}>
       <div className="row">
-      <div className="col-md-6 p-4">
+      <div className="col-md-6 p-2">
           {/* Información de contacto y formulario */}
           <div className={styles['contact-form']}>
             <h2>Formulario de Contacto</h2>
@@ -81,11 +101,24 @@ const Contact = () => {
                   <option value="seccion4">Sección 4</option>
                 </select>
               </div>
-              <button type="submit" className="btn btn-primary">Enviar</button>
+              <div className="form-check mt-3">
+                <input
+                  type="checkbox"
+                  id="terminos"
+                  name="terminos"
+                  className="form-check-input"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
+                />
+                <label htmlFor="terminos" className="form-check-label">
+                  Acepto los términos y condiciones
+                </label>
+              </div>
+              <button type="submit" className="btn btn-primary mt-2" disabled={!isFormValid}>Enviar</button>
             </form>
           </div>
         </div>
-        <div className="col-md-6 p-4">
+        <div className="col-md-6 p-2">
           {/* Información del profesional */}
           <div className={styles['contact-info']}>
             <h2>Información de Contacto</h2>
