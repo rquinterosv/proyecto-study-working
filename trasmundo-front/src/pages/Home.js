@@ -6,8 +6,6 @@ import HeroSection from '../components/HeroSection';
 import GeneralService from '../components/GeneralService';
 import CardFlag from '../components/CardFlag';
 import Service1 from '../components/Service1';
-import Service2 from '../components/Service2';
-import Service3 from '../components/Service3';
 import Footer from '../components/Footer';
 
 // Bootstrap
@@ -26,18 +24,17 @@ function Home() {
 
     if (countryName === 'Canada') {
       setSelectedCountry('Canada');
-      console.log('Selected Country:', selectedCountry); // Verificar el valor de selectedCountry
+      console.log('Selected Country:', selectedCountry);
     } else if (countryName === 'Europa') {
       setSelectedCountry('Europe');
-      console.log('Selected Country:', selectedCountry); // Verificar el valor de selectedCountry
+      console.log('Selected Country:', selectedCountry);
     }
-    // Agrega más casos según sea necesario para otros países
   };
 
   return (
     <>
       <HeroSection />
-      <Container>
+      <Container id="services">
         <GeneralService />
       </Container>
 
@@ -48,7 +45,7 @@ function Home() {
             <CardFlag
               flagSrc="https://flagcdn.com/w320/ca.png"
               countryName="Canada"
-              isSelected={selectedCountry === 'Canada'} // Añade isSelected
+              isSelected={selectedCountry === 'Canada'} 
               onClick={handleCardClick}
             />
           </Col>
@@ -56,18 +53,15 @@ function Home() {
             <CardFlag
               flagSrc="https://flagcdn.com/w320/eu.png"
               countryName="Europa"
-              isSelected={selectedCountry === 'Europe'} // Añade isSelected
+              isSelected={selectedCountry === 'Europe'}
               onClick={() => handleCardClick('Europa')}
             />
           </Col>
-          {/* Agrega más tarjetas según sea necesario */}
         </Row>
       </Container>
 
-      {/* Mostrar contenido específico según la tarjeta seleccionada */}
       {selectedCountry === 'Canada' && <Service1 selectedCountry={selectedCountry} />}
       {selectedCountry === 'Europe' && <div>Contenido específico para Europa</div>}
-      {/* Agrega más condiciones para otros países si es necesario */}
       <Footer />
     </>
   );

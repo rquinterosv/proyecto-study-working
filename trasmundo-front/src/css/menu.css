@@ -1,0 +1,53 @@
+/* Estilos para desktop */
+@media (min-width: 768px) {
+    .navbar-brand img {
+      width: 200px; /* Tamaño para pantallas grandes */
+      height: auto;
+    }
+  
+    /* En tu archivo menu.css */
+
+    /* Ajusta el color del texto del menú desplegable */
+    .navbar-light .navbar-nav .nav-link {
+        color: #81A649 !important;
+    }
+    
+    /* Ajusta el color del texto del menú desplegable cuando está desplegado */
+    .navbar-light .navbar-nav .show > .nav-link,
+    .navbar-light .navbar-nav .active > .nav-link,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #81A649 !important;
+    }
+
+    .dropdown-menu .dropdown-item {
+        font-style: italic;
+        color: #393459 !important;
+      }
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 767px) {
+    .navbar-brand img {
+      width: 200px; /* Tamaño para pantallas pequeñas */
+      height: auto;
+    }
+  
+    /* Ajusta el color del texto del menú desplegable */
+    .navbar-light .navbar-nav .nav-link {
+        color: #81A649 !important;
+    }
+    
+    /* Ajusta el color del texto del menú desplegable cuando está desplegado */
+    .navbar-light .navbar-nav .show > .nav-link,
+    .navbar-light .navbar-nav .active > .nav-link,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #81A649 !important;
+    }
+
+    .dropdown-menu .dropdown-item {
+        font-style: italic;
+        color: #393459 !important;
+      }
+  }

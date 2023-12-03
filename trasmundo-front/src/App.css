@@ -37,24 +37,6 @@ h5 {
   font-style: italic;
 }
 
-/* Menu */
-
-/* Estilos para desktop */
-@media (min-width: 768px) {
-  .navbar-brand img {
-    width: 200px; /* Tamaño para pantallas grandes */
-    height: auto;
-  }
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
-  .navbar-brand img {
-    width: 200px; /* Tamaño para pantallas pequeñas */
-    height: auto;
-  }
-}
-
 /* General Service */
 .service-list {
   display: flex;
@@ -114,7 +96,6 @@ h5 {
 /* Service */
 
 .custom-container-service {
-  margin: 5px;
   padding: 20px; /* Opcional: Añade espaciado interno al contenedor */
 }
 
