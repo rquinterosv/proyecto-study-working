@@ -1,5 +1,7 @@
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import img1 from '../img/Hero.png'; // Cambia estas URLs por las imágenes correspondientes
+import { Link } from 'react-router-dom';
+
+import img1 from '../img/Hero.png';
 
 const Service1 = ({ selectedCountry }) => {
   const services = [
@@ -51,7 +53,9 @@ const Service1 = ({ selectedCountry }) => {
                             ))}
                           </ul>
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Link to="/contact">
+                          <Button variant="primary">Más información</Button>
+                        </Link>
                       </Card.Body>
                     </Card>
                   </Col>

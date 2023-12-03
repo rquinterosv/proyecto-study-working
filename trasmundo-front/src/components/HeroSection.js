@@ -1,6 +1,8 @@
 import React from 'react';
 import '../App.css';
 import heroimg from '../img/img-hero.webp';
+import { Link } from 'react-router-dom';
+
 
 export default function HeroSection() {
   return (
@@ -25,14 +27,14 @@ export default function HeroSection() {
             <div>
               <h1 className='mb-3'>Estudiar Trabajar Visitar</h1>
               <h5 className='mb-3'>Te apoyamos con el proceso para comenzar tu nueva vida</h5>
-              <a
-                className='btn btn-outline-dark btn-lg'
-                href='#!'
-                role='button'
-                style={{ borderColor: '#393459', color: '#F2E2CE' }} // Blanco para el texto
-              >
-                Agenda una reunión
-              </a>
+              <Link to="/contact">
+                <button
+                  className='btn btn-light btn-lg'
+                  style={{ borderColor: '#393459', color: '#81A649' }}
+                >
+                  Agenda una reunión
+                </button>
+              </Link>
             </div>
           </div>
         </div>

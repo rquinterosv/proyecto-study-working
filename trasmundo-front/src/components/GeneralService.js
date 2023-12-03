@@ -16,8 +16,8 @@ const GeneralService = () => {
   return (
     <div className="text-center p-4">
       <div className="general-service">
-        <p>Te apoyamos con el primer paso para obtener una de las siguientes Visas</p>
         <h2 style={{ backgroundColor: '#94E1F2', borderRadius: '10px', padding: '5px', color: 'white' }}>Nuestros servicios</h2>
+        <p>Te apoyamos con el primer paso para obtener una de las siguientes Visas</p>
         <div className="service-list">
           {services.map((service, index) => (
             <div key={index} className="service-item">
