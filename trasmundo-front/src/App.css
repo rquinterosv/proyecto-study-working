@@ -1,0 +1,124 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Fonts */
+
+h1 {
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #94E1F2; /* Color de letras */
+}
+
+h2 {
+  font-style: italic;
+  background-color: #94E1F2; /* Nuevo color de fondo */
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}
+
+h3 {
+  font-weight: 600;
+  font-style: italic;
+}
+
+h5 {
+  font-weight: 400;
+  color: white;
+  font-style: italic;
+}
+
+/* Menu */
+
+/* Estilos para desktop */
+@media (min-width: 768px) {
+  .navbar-brand img {
+    width: 200px; /* Tamaño para pantallas grandes */
+    height: auto;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .navbar-brand img {
+    width: 200px; /* Tamaño para pantallas pequeñas */
+    height: auto;
+  }
+}
+
+/* General Service */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.service-item {
+  text-align: center;
+  margin: 20px;
+  flex: 1 0 calc(25% - 40px); /* Ajusta el ancho para que haya cuatro elementos por fila */
+  max-width: calc(25% - 40px); /* Ancho máximo para asegurar cuatro elementos por fila */
+}
+
+@media screen and (max-width: 768px) {
+  .service-item {
+    flex: 1 0 calc(50% - 40px); /* En dispositivos pequeños, dos elementos por fila */
+    max-width: calc(50% - 40px); /* Ancho máximo para dos elementos por fila */
+  }
+}
+
+/* CardFlag */
+
+.card-flag-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-flag-container .card-flag {
+  border: 2px solid #ccc; /* Borde sólido de 2px con color gris */
+  border-radius: 10px; /* Radio de borde de 10px para esquinas redondeadas */
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-flag-container .card-flag:hover {
+  border-color: #333; /* Cambio de color al pasar el mouse */
+}
+
+.image-container {
+  width: 100px; /* Ancho fijo para las imágenes */
+  height: 100%; /* Alto fijo para las imágenes */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.flag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen manteniendo la relación de aspecto */
+}
+
+/* Service */
+
+.custom-container-service {
+  margin: 5px;
+  padding: 20px; /* Opcional: Añade espaciado interno al contenedor */
+}
+
+.custom-container-service .custom-image {
+  border: 2px solid black; /* Borde negro de 2px */
+  border-radius: 10px; /* Radio de borde de 10px */
+}
