@@ -1,3 +1,5 @@
+/* contact.css */
+
 /* Colores */
 :root {
   --azul: #393459; /* Azul */
@@ -8,11 +10,10 @@
 
 /* Estilos para el cuadro de contacto */
 .container {
-  background-color: white;
+  background-color: var(--azul);
   padding: 30px;
-  border: 5px solid var(--celeste); /* Cambio de color a Celeste */
+  border: 5px solid var(--celeste);
   border-radius: 10px;
-  margin: 20px;
 }
 
 .professional-profile img {
@@ -22,20 +23,12 @@
 
 .professional-profile h3,
 .professional-profile p {
-  color: var(--verde); /* Cambio de color a Verde */
-  font-weight: 600;
+  color: var(--verde);
 }
 
 .contact-info,
 .contact-form {
-  color: var(--verde); /* Cambio de color a Azul */
-  font-weight: 600;
-  font-style: italic;
-}
-
-.contact-info,
-.contact-form label{
-  padding: 5px;
+  color: var(--cafe);
 }
 
 /* Agrega estilos adicionales si los necesitas */
