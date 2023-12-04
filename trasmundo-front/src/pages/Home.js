@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
+
 
 // Components
 import HeroSection from '../components/HeroSection';
@@ -14,6 +16,8 @@ import { Container, Row, Col} from 'react-bootstrap';
 
 function Home() {
   const [selectedCountry, setSelectedCountry] = useState('Canada');
+  const navigate = useNavigate(); // Usa useNavigate para manejar la navegación
+
 
   useEffect(() => {
     setSelectedCountry('Canada');
@@ -31,11 +35,14 @@ function Home() {
     }
   };
 
+  const handleServiceClick = (link) => {
+    navigate(link); // Utiliza navigate para redireccionar
+  };
   return (
     <>
       <HeroSection />
       <Container id="services">
-        <GeneralService />
+        <GeneralService handleServiceClick={handleServiceClick} />
       </Container>
 
       <Container fluid>

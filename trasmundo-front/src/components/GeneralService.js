@@ -2,11 +2,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEarthAmericas, faGraduationCap, faPlane, faHandshake } from '@fortawesome/free-solid-svg-icons';
 
 const GeneralService = () => {
+  const handleServiceClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const services = [
-    { icon: faGraduationCap, title: 'Visas de Estudio' },
-    { icon: faEarthAmericas, title: 'Cursos de inglés' },
-    { icon: faPlane, title: 'Plan de Vacaciones' },
-    { icon: faHandshake, title: 'Asesoría Migratoria' },
+    { icon: faGraduationCap,
+      title: 'Visas de Estudio',
+      id: 'visa-estudios' },
+
+    { icon: faEarthAmericas, 
+      title: 'Cursos de inglés', 
+      id: 'curso-ingles' },
+
+    { icon: faPlane, 
+      title: 'Plan de Vacaciones', 
+      id: 'plan-vacaciones' },
+
+    { icon: faHandshake, 
+      title: 'Asesoría Migratoria', 
+      id: 'asesoria' },
   ];
 
   const titleStyle = {
@@ -20,7 +37,7 @@ const GeneralService = () => {
         <p>Te apoyamos con el primer paso para obtener una de las siguientes Visas</p>
         <div className="service-list">
           {services.map((service, index) => (
-            <div key={index} className="service-item">
+            <div key={index} className="service-item" onClick={() => handleServiceClick(service.id)}>
               <FontAwesomeIcon icon={service.icon} size="3x" />
               <h4 style={titleStyle}>{service.title}</h4>
             </div>
