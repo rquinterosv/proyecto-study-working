@@ -1,19 +1,24 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import styles from '../css/footer.module.css';
+
+import FacebookIcon from '../img/facebook.svg';
+import InstagramIcon from '../img/instagram.svg';
+import LinkedinIcon from '../img/linkedin.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light">
-      <Container className="py-4">
+    <footer className={styles.footer}>
+      <Container>
         <Row>
-          <Col md={6}>
-            <h4>Footer Content</h4>
-            <p>This is the footer content. You can add various information and links here.</p>
-          </Col>
-          <Col md={6} className="text-md-end">
+          <Col md={12} className="text-center">
             <h5>Contact Us</h5>
-            <p>Email: example@example.com</p>
-            <p>Phone: +1 234 56789</p>
+            <p>Email: contacto@trasmundo.com</p>
+            <div className={`social-icons ${styles.socialIcons}`}>
+            <a href="enlace-a-tu-perfil-de-Facebook" className={`social-icon ${styles.socialIcon}`}><img src={FacebookIcon} alt="Facebook"  style={{ width: '50px', height: '50px', padding: '5px' }} /></a>
+            <a href="enlace-a-tu-perfil-de-Instagram" className={`social-icon ${styles.socialIcon}`}><img src={InstagramIcon} alt="Instagram"  style={{ width: '50px', height: '50px', padding: '5px' }} /></a>
+            <a href="enlace-a-tu-perfil-de-LinkedIn" className={`social-icon ${styles.socialIcon}`}><img src={LinkedinIcon} alt="LinkedIn"  style={{ width: '50px', height: '50px', padding: '5px' }} /></a>
+            </div>
           </Col>
         </Row>
         <hr className="bg-light" />

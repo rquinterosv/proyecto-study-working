@@ -5,7 +5,8 @@ import About from '../src/pages/About';
 import Contact from '../src/pages/Contact';
 import Blog from '../src/pages/Blog';
 
-import Menu from './components/Menu'; // Import your Menu component
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

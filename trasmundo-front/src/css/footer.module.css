@@ -1,0 +1,26 @@
+/* Colores */
+:root {
+  --azul: #393459; /* Azul */
+  --celeste: #94E1F2; /* Celeste */
+  --verde: #81A649; /* Verde */
+  --cafe: #F2E2CE; /* Café */
+}
+
+.footer {
+    background-color: var(--azul);
+    color: var(--celeste);
+    position: relative; 
+    width: 100%;
+    padding: 20px;
+  }
+  
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Para alinear los íconos horizontalmente */
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin: 0 10px; /* Espaciado entre los iconos */
+}

@@ -8,7 +8,6 @@ import HeroSection from '../components/HeroSection';
 import GeneralService from '../components/GeneralService';
 import CardFlag from '../components/CardFlag';
 import Service1 from '../components/Service1';
-import Footer from '../components/Footer';
 
 // Bootstrap
 import { Container, Row, Col} from 'react-bootstrap';
@@ -69,7 +68,6 @@ function Home() {
 
       {selectedCountry === 'Canada' && <Service1 selectedCountry={selectedCountry} />}
       {selectedCountry === 'Europe' && <div>Contenido específico para Europa</div>}
-      <Footer />
     </>
   );
 }
