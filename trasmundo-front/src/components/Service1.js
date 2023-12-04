@@ -38,37 +38,31 @@ const Service1 = ({ selectedCountry, servicesList }) => {
 
   return (
     <Container fluid className="custom-container-service">
-      <Row className="align-items-center">
-        <Col lg={12} className="order-lg-2">
-          <div className="container">
-            {selectedCountry === 'Canada' &&
-              services.map((service, index) => (
-                <Row id={service.id} key={index} className="align-items-center justify-content-center">
-                  <Col key={index} lg={3} md={12} className="mb-3">
-                    <Card style={{ width: '100%' }}>
-                      <Card.Img variant="top" src={service.image} />
-                      <Card.Body>
-                        <Card.Title>{service.title}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{service.subTitle}</Card.Subtitle>
-                        <Card.Text>
-                          <ul>
-                            {service.points.map((point, idx) => (
-                              <li key={idx}>{point}</li>
-                            ))}
-                          </ul>
-                        </Card.Text>
-                        <Link to="/contact">
-                          <Button variant="primary">Más información</Button>
-                        </Link>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                </Row>
-              ))}
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <Row className="align-items-center">
+      {selectedCountry === 'Canada' &&
+        services.map((service, index) => (
+          <Col key={index} lg={3} md={6} className="mb-3">
+            <Card style={{ width: '100%' }}>
+              <Card.Img variant="top" src={service.image} />
+              <Card.Body>
+                <Card.Title>{service.title}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">{service.subTitle}</Card.Subtitle>
+                <Card.Text>
+                  <ul>
+                    {service.points.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                </Card.Text>
+                <Link to="/contact">
+                  <Button variant="primary">Más información</Button>
+                </Link>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+    </Row>
+  </Container>
 
   );
 };
