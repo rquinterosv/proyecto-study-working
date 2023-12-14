@@ -1,33 +1,29 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEarthAmericas, faGraduationCap, faPlane, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import VisaEstudios from '../img/graduation-hat.png';
+import CursoIngles from '../img/eng.png';
+import PlanVacaciones from '../img/honeymoon.png';
+import Asesoria from '../img/support.png';
 
 const GeneralService = () => {
-  const handleServiceClick = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   const services = [
-    { icon: faGraduationCap,
-      title: 'Visas de Estudio',
-      id: 'visa-estudios' },
-
-    { icon: faEarthAmericas, 
-      title: 'Cursos de inglés', 
-      id: 'curso-ingles' },
-
-    { icon: faPlane, 
-      title: 'Plan de Vacaciones', 
-      id: 'plan-vacaciones' },
-
-    { icon: faHandshake, 
-      title: 'Asesoría Migratoria', 
-      id: 'asesoria' },
+    { image: VisaEstudios, title: 'Visas de Estudio', id: 'visa-estudios' },
+    { image: CursoIngles, title: 'Cursos de inglés', id: 'curso-ingles' },
+    { image: PlanVacaciones, title: 'Plan de Vacaciones', id: 'plan-vacaciones' },
+    { image: Asesoria, title: 'Asesoría Migratoria', id: 'asesoria' },
   ];
 
   const titleStyle = {
-    color: '#393459', // Nuevo color de texto
+    color: '#393459',
+  };
+
+  const handleServiceClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const container = document.querySelector('.service-list');
+      if (container) {
+        container.scrollTop = element.offsetTop - container.offsetTop;
+      }
+    }
   };
 
   return (
@@ -37,8 +33,8 @@ const GeneralService = () => {
         <p>Te apoyamos con el primer paso para obtener una de las siguientes Visas</p>
         <div className="service-list">
           {services.map((service, index) => (
-            <div key={index} className="service-item" onClick={() => handleServiceClick(service.id)}>
-              <FontAwesomeIcon icon={service.icon} size="3x" />
+            <div key={index} id={service.id} className="service-item" onClick={() => handleServiceClick(service.id)}>
+              <img src={service.image} alt={service.title} style={{ width: '100px', height: '100px' }} />
               <h4 style={titleStyle}>{service.title}</h4>
             </div>
           ))}
