@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import ConfirmationMessage from '../components/ConfirmationMessage'; 
+import { Navigate } from 'react-router-dom'; // Agrega esta línea
+
 import styles from '../css/contact.module.css'; 
 
-const Contact = () => {
+const Contact = ({ setFormSubmitted }) => {
+  const navigate = useNavigate();
+  const [formSubmitted, setLocalFormSubmitted] = useState(false);
+
 
   const [formData, setFormData] = useState({
     nombre: '',
@@ -24,7 +31,7 @@ const Contact = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await fetch('http://localhost:3001/api/contact', {
         method: 'POST',
@@ -36,6 +43,8 @@ const Contact = () => {
 
       if (response.ok) {
         console.log('Formulario enviado correctamente');
+        setFormSubmitted(true); // Actualizar el estado en App
+        setLocalFormSubmitted(true); // Actualizar el estado local
       } else {
         console.error('Error al enviar el formulario');
       }
@@ -81,9 +90,11 @@ const Contact = () => {
     setIsFormValid(isChecked);
   }, [isChecked]);
 
+  console.log('formSubmitted:', formSubmitted);
 
   return (
     <div className={`${styles.container} container-fluid`}>
+      {formSubmitted && <Navigate to="/confirmation" />}
       <div className="row">
         <div className="col-lg-6">
           <form onSubmit={handleFormSubmit} className={`${styles.form} p-4`}>
@@ -131,6 +142,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ConfirmationMessage show={formSubmitted} />
     </div>
   );
 };
